@@ -1,0 +1,5 @@
+american(robert).
+hostile(country_a). 
+sold(robert, missiles, country_a).
+criminal(X) :- american(X), hostile(Y), sold(X, missiles, Y).
+prove :- criminal(robert), write('Robert is a criminal.\n').
