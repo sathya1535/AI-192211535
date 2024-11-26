@@ -1,0 +1,6 @@
+lucky(john).   
+studies(john) :- fail. 
+pass(john) :- lucky(john).  
+win_lottery(john) :- lucky(john).  
+happy(john) :- pass(john), win_lottery(john). 
+?- happy(john).
