@@ -1,0 +1,26 @@
+female(sarah).
+female(rebekah).
+female(hagar_concubine).
+female(milcah).
+female(bashemath).
+female(mahalath).
+female(first_daughter).
+female(rachel).
+female(labans_wife).
+male(terah).
+male(abraham).
+male(nahor).
+male(haran).
+male(isaac).
+male(ismael).
+male(uz).
+male(kemuel).
+parent(abraham, isaac).
+parent(sarah, isaac).
+parent(hagar_concubine, ismael).
+parent(terah, abraham).
+parent(terah, nahor).
+parent(terah, haran).
+mother(X, Y) :- female(X), parent(X, Y).
+father(X, Y) :- male(X), parent(X, Y).
+mother(X, isaac).
