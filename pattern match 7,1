@@ -1,0 +1,11 @@
+first_name(tonyblair, tony).
+first_name(georgebush, georgedubya).
+second_name(tonyblair, blair).
+second_name(georgebush, bush).
+match_names(Person, FirstName, SecondName) :-
+    first_name(Person, FirstName),
+    second_name(Person, SecondName).
+
+% Query examples
+% match_names(tonyblair, tony, blair).
+% match_names(georgebush, georgedubya, bush).
