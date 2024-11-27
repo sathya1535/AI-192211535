@@ -1,0 +1,9 @@
+vowel(a). vowel(e). vowel(i). vowel(o). vowel(u).
+count_vowels([], 0).
+count_vowels([H|T], Count) :-
+    (vowel(H) -> count_vowels(T, TailCount), Count is TailCount + 1;
+                 count_vowels(T, Count)).
+count(String, Count) :-
+    string_chars(String, CharList),
+    count_vowels(CharList, Count).
+count("This is my first Degree in Saveetha School of Engineering", Count).
